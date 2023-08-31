@@ -5,7 +5,7 @@
 */
 import React from "react";
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
-import { Chirp } from "@/Components/Chirp";
+import Chirp from "@/Components/Chirp";
 import InputError from "@/Components/InputError";
 import PrimaryButton from "@/Components/PrimaryButton";
 import { useForm, Head } from "@inertiajs/react";
@@ -15,7 +15,7 @@ import { useForm, Head } from "@inertiajs/react";
 | Index |
 =========
 */
-export const Index = ({ auth, chirps }) => {
+export default function Index({ auth, chirps }) {
     const { data, setData, post, processing, reset, errors } = useForm({
         message: "",
     });
@@ -53,4 +53,4 @@ export const Index = ({ auth, chirps }) => {
             </div>
         </AuthenticatedLayout>
     );
-};
+}
