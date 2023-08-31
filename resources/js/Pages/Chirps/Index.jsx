@@ -11,11 +11,22 @@ import PrimaryButton from "@/Components/PrimaryButton";
 import { useForm, Head } from "@inertiajs/react";
 
 /*
+================
+| Global logic |
+================
+*/
+
+/*
 =========
 | Index |
 =========
 */
 export default function Index({ auth, chirps }) {
+    /*
+    ===============
+    | Local Logic |
+    ===============
+    */
     const { data, setData, post, processing, reset, errors } = useForm({
         message: "",
     });
@@ -25,6 +36,11 @@ export default function Index({ auth, chirps }) {
         post(route("chirps.store"), { onSuccess: () => reset() });
     };
 
+    /*
+    =============
+    | Main Body |
+    =============
+    */
     return (
         <AuthenticatedLayout user={auth.user}>
             <Head title="Chirps" />
