@@ -58,6 +58,7 @@ export default function Chirp({ chirp }) {
                         </small>
                     </div>
                 </div>
+
                 <p className="mt-4 text-lg text-gray-900">{chirp.message}</p>
             </div>
         </div>
